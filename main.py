@@ -30,6 +30,8 @@ async def execute_action(message: Message):
     data = await bb.balaboba(query=message.text, intro=0)
     if data is None:
         return await msg.reply("Что-то пошло не так...\nПопробуйте еще раз.")
+    if data == message.text:
+        return await msg.reply("Извините, но нейросеть не генерирует текста, которые могут показаться оскорбительными, нарушающие законы или на острую тему.")
     await msg.reply(data)
 
 
