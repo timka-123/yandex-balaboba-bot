@@ -1,0 +1,3 @@
+aiogram
+aiobalaboba
+python_dotenv
