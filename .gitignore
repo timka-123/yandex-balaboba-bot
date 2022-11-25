@@ -2,3 +2,4 @@ venv/
 dev-notes.txt
 .env
 .idea/
+.vscode/
