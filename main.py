@@ -43,8 +43,8 @@ async def type_handler(query: CallbackQuery):
     global text
     if text is None:
         return await query.answer("Извините, но вызовите данную интеракцию снова, чтобы использовать её", show_alert=True)
-    data = await bb.balaboba(query=str(text), intro=int(query.data))
     await query.answer("Ожидайте ответа от нейросети.", show_alert=True)
+    data = await bb.balaboba(query=str(text), intro=int(query.data))
     if data == text:
         return await query.message.reply("Извините, но Балабоба не смогла обработать данный запрос.")
     text = None
