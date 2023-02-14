@@ -31,7 +31,9 @@ async def execute_action(message: Message):
     short = InlineKeyboardButton(text="Короткие истории", callback_data='6')
     wiki = InlineKeyboardButton(text="Короче, Википедия", callback_data='8')
     film = InlineKeyboardButton(text="Синопсисы к фильму", callback_data='9')
-    view.add(nonestyle, howto, recipe, narod, short, wiki, film)
+    sport = InlineKeyboardButton(text="Балабоба и sports.ru", callback_data='34')
+    love = InlineKeyboardButton(text="Песни о любви", callback_data="37")
+    view.add(nonestyle, howto, recipe, narod, short, wiki, film, sport, love)
     global text
     text = message.text
     await message.reply("Выберите категорию генерации", reply_markup=view)
